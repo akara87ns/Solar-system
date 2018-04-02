@@ -1,5 +1,27 @@
-@mixin planet-orbit {
+@mixin planet-orbit($dimensions) {
     position: absolute;
     border-radius: 50%;
     border: 1px dotted white;
+    width: $dimensions;
+    height: $dimensions;
+}
+
+@mixin planet {
+    width: 100%;
+    height: 100%;
+}
+
+@mixin planet-after($planet-diameter, $planet-color, $top) {
+    content: '';
+            position: absolute;
+            border-radius: 50%;
+            left: 47%;
+            top: $top;
+            height: $planet-diameter;
+            width: $planet-diameter;
+            background: $planet-color;
+}
+
+@mixin animation($time) {
+    animation: rotate $time linear infinite;
 }

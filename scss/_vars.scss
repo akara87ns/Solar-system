@@ -1,0 +1,20 @@
+//Time needed for Earth to orbit around the Sun. Speed that other planets travel around the Sun will be based on Earth's time
+$time: 36.5s;
+
+//Dimensions of Earth's orbit. Orbits of other planets will be based on this value
+$orbit-dimensions: 185px;
+
+//Diameter of Earth. Diameter of other planets will be based on this value
+$diameter: 13px;
+
+//Color of planets
+$mercury-color: gray;
+$venus-color: goldenrod;
+$earth-color: blue;
+$mars-color: firebrick;
+$jupiter-color: sienna;
+$saturn-color: maroon;
+$uranus-color: lightsteelblue;
+$neptune-color: royalblue;
+
+
