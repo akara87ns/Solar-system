@@ -133,27 +133,32 @@ p {
 
 #sidebar {
     position: absolute;
-    right: 0;//-17%;
+    right: -17%;
     top: 0;
     width: 20%;
     height: 100vh;
-    background: rgba(0, 0, 0, 0.5);
+    // background: rgba(0, 0, 0, 0.5);
     // border-left: 1px solid white;
     display: flex;
 }
 
 #nav-button {
     width: 15%;
+    height: 5%;
+    margin-top: 0.7em;
+    display: inline-block;
+    cursor: pointer;
     span {
-        margin-top: 5px;
+        margin-bottom: 5px;
         display: block;
-        width: 75%;
+        width: 35px;
         height: 5px;
         background: white;
+        
     }
 }
 
-#planets {
+#planets-nav {
     width: 85%;
     height: 100%;
     background: rgba(255, 255, 255, 0.4);
@@ -174,6 +179,12 @@ p {
         padding: 1em;
         margin: 0;
         border-bottom: 3px solid grey;
+        span {
+            position: absolute;
+            right: 1.5em;
+            opacity: 0.5;
+
+        }
     }
     a {
         display: inline-block;
@@ -181,7 +192,11 @@ p {
         margin-bottom: 0.5em;
         text-decoration: none;
         color: black; 
-        background: white;
-        border-radius: 1em;  
+        background: rgba(179, 179, 179, 0.9);
+        border-radius: 1em; 
+        font-size: 0.9em;
+        &:hover {
+            background: rgba(214, 214, 214, 0.9);
+        } 
     }
 }

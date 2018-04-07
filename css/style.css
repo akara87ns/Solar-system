@@ -191,47 +191,57 @@ p {
     transform: rotate(360deg); } }
 #sidebar {
   position: absolute;
-  right: 0;
+  right: -17%;
   top: 0;
   width: 20%;
   height: 100vh;
-  background: rgba(0, 0, 0, 0.5);
   display: flex; }
 
 #nav-button {
-  width: 15%; }
+  width: 15%;
+  height: 5%;
+  margin-top: 0.7em;
+  display: inline-block;
+  cursor: pointer; }
   #nav-button span {
-    margin-top: 5px;
+    margin-bottom: 5px;
     display: block;
-    width: 75%;
+    width: 35px;
     height: 5px;
     background: white; }
 
-#planets {
+#planets-nav {
   width: 85%;
   height: 100%;
   background: rgba(255, 255, 255, 0.4);
   overflow-y: scroll;
   transition: all 1s; }
-  #planets .planet {
+  #planets-nav .planet {
     cursor: pointer;
     transition: all 1s; }
-    #planets .planet:hover {
+    #planets-nav .planet:hover {
       background: rgba(255, 255, 255, 0.1); }
-  #planets .planetDescription {
+  #planets-nav .planetDescription {
     display: none;
     transition: all 1s; }
-  #planets h3 {
+  #planets-nav h3 {
     padding: 1em;
     margin: 0;
     border-bottom: 3px solid grey; }
-  #planets a {
+    #planets-nav h3 span {
+      position: absolute;
+      right: 1.5em;
+      opacity: 0.5; }
+  #planets-nav a {
     display: inline-block;
     padding: 0.3em 0.7em;
     margin-bottom: 0.5em;
     text-decoration: none;
     color: black;
-    background: white;
-    border-radius: 1em; }
+    background: rgba(179, 179, 179, 0.9);
+    border-radius: 1em;
+    font-size: 0.9em; }
+    #planets-nav a:hover {
+      background: rgba(214, 214, 214, 0.9); }
 
 /*# sourceMappingURL=style.css.map */
