@@ -13,20 +13,5 @@ document.getElementById("planets-nav").addEventListener("click", function(e) {
 
 
 document.getElementById("nav-button").addEventListener("click", function(e) {
-    let navigation = document.getElementById("nav-button");
-    let sidebar = document.getElementById("sidebar");
-    
-
-    if (e.target.parentElement.style.right === 0) {
-        e.target.parentElement.style.right = -17%;
-        // console.log("Click");
-        // sidebar.style.right === 0;
-    } else {
-        e.target.parentElement.style.right = 0;
-    }
-    // if (e.target == navigation && sidebar.style.right == -17%) {
-    //     sidebar.style.right = 0;    
-    // } else {
-    //     sidebar.style.right = -17%;
-    // }
+    document.getElementById("sidebar").classList.toggle("visible");
 });

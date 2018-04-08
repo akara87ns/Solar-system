@@ -1,7 +1,9 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+  font-family: sans-serif; }
+
+h3, p, a {
   text-align: center; }
 
 p {
@@ -189,18 +191,24 @@ p {
     transform: rotate(0deg); }
   100% {
     transform: rotate(360deg); } }
-#sidebar {
-  position: absolute;
-  right: -17%;
-  top: 0;
-  width: 20%;
+.sidebar {
+  width: 100%;
   height: 100vh;
-  display: flex; }
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  position: absolute;
+  left: -16.7%;
+  top: 0;
+  transition: all 0.3s linear; }
+
+.visible {
+  position: absolute;
+  left: 0;
+  top: 0;
+  transition: all 0.3s linear; }
 
 #nav-button {
-  width: 15%;
-  height: 5%;
-  margin-top: 0.7em;
+  margin: 1em;
   display: inline-block;
   cursor: pointer; }
   #nav-button span {
@@ -211,10 +219,8 @@ p {
     background: white; }
 
 #planets-nav {
-  width: 85%;
-  height: 100%;
-  background: rgba(255, 255, 255, 0.4);
-  overflow-y: scroll;
+  background: rgba(255, 255, 255, 0.5);
+  overflow-y: auto;
   transition: all 1s; }
   #planets-nav .planet {
     cursor: pointer;
@@ -223,15 +229,14 @@ p {
       background: rgba(255, 255, 255, 0.1); }
   #planets-nav .planetDescription {
     display: none;
-    transition: all 1s; }
+    transition: all 1s;
+    text-align: center; }
   #planets-nav h3 {
     padding: 1em;
     margin: 0;
     border-bottom: 3px solid grey; }
     #planets-nav h3 span {
-      position: absolute;
-      right: 1.5em;
-      opacity: 0.5; }
+      opacity: 0.3; }
   #planets-nav a {
     display: inline-block;
     padding: 0.3em 0.7em;
