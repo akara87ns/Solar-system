@@ -142,14 +142,14 @@ p {
     position: absolute;
     left: -16.7%;
     top: 0;
-    transition: all 0.3s linear;
+    @include sidebar-transition;
 }
 
 .visible {
     position: absolute;
     left: 0;
     top: 0;
-    transition: all 0.3s linear;
+    @include sidebar-transition;
 }
 
 #nav-button {
@@ -162,32 +162,49 @@ p {
         width: 35px;
         height: 5px;
         background: white;
-        
+        position: relative;
+        top: 0;
+        @include sidebar-transition;
+    }
+}
+
+#nav-button.open {
+    @include sidebar-transition;
+    span:nth-child(2) {
+        width: 0;
+        opacity: 0;
+    }
+    span:nth-child(1) {
+        transform: rotate(-45deg); 
+        top: 10px;
+    }
+    span:nth-child(3) {
+        transform: rotate(45deg); 
+        top: -10px;
     }
 }
 
 #planets-nav {
     background: rgba(255, 255, 255, 0.5);
     overflow-y: auto;
-    transition: all 1s;
     .planet {
         cursor: pointer;
-        transition: all 1s;
         &:hover {
-            background: rgba(255, 255, 255, 0.1);
+            background: rgba(255, 255, 255, 0.3);
         }
     }
     .planetDescription {
         display: none;
-        transition: all 1s;
         text-align: center;
+        @include sidebar-transition;
     }
     h3 {
         padding: 1em;
         margin: 0;
-        border-bottom: 3px solid grey;
+        border-bottom: 3px solid rgb(110, 110, 110);
         span {
             opacity: 0.3;
+            z-index: -1;
 
         }
     }
@@ -197,11 +214,12 @@ p {
         margin-bottom: 0.5em;
         text-decoration: none;
         color: black; 
-        background: rgba(179, 179, 179, 0.9);
+        background: rgba(148, 146, 146, 0.9);
         border-radius: 1em; 
         font-size: 0.9em;
         &:hover {
             background: rgba(214, 214, 214, 0.9);
+            @include sidebar-transition;
         } 
     }
 }

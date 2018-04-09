@@ -199,13 +199,13 @@ p {
   position: absolute;
   left: -16.7%;
   top: 0;
-  transition: all 0.3s linear; }
+  transition: all 0.5s ease-in-out; }
 
 .visible {
   position: absolute;
   left: 0;
   top: 0;
-  transition: all 0.3s linear; }
+  transition: all 0.5s ease-in-out; }
 
 #nav-button {
   margin: 1em;
@@ -216,37 +216,52 @@ p {
     display: block;
     width: 35px;
     height: 5px;
-    background: white; }
+    background: white;
+    position: relative;
+    top: 0;
+    transition: all 0.5s ease-in-out; }
+
+#nav-button.open {
+  transition: all 0.5s ease-in-out; }
+  #nav-button.open span:nth-child(2) {
+    width: 0;
+    opacity: 0; }
+  #nav-button.open span:nth-child(1) {
+    transform: rotate(-45deg);
+    top: 10px; }
+  #nav-button.open span:nth-child(3) {
+    transform: rotate(45deg);
+    top: -10px; }
 
 #planets-nav {
   background: rgba(255, 255, 255, 0.5);
-  overflow-y: auto;
-  transition: all 1s; }
+  overflow-y: auto; }
   #planets-nav .planet {
-    cursor: pointer;
-    transition: all 1s; }
+    cursor: pointer; }
     #planets-nav .planet:hover {
-      background: rgba(255, 255, 255, 0.1); }
+      background: rgba(255, 255, 255, 0.3); }
   #planets-nav .planetDescription {
     display: none;
-    transition: all 1s;
-    text-align: center; }
+    text-align: center;
+    transition: all 0.5s ease-in-out; }
   #planets-nav h3 {
     padding: 1em;
     margin: 0;
-    border-bottom: 3px solid grey; }
+    border-bottom: 3px solid #6e6e6e; }
     #planets-nav h3 span {
-      opacity: 0.3; }
+      opacity: 0.3;
+      z-index: -1; }
   #planets-nav a {
     display: inline-block;
     padding: 0.3em 0.7em;
     margin-bottom: 0.5em;
     text-decoration: none;
     color: black;
-    background: rgba(179, 179, 179, 0.9);
+    background: rgba(148, 146, 146, 0.9);
     border-radius: 1em;
     font-size: 0.9em; }
     #planets-nav a:hover {
-      background: rgba(214, 214, 214, 0.9); }
+      background: rgba(214, 214, 214, 0.9);
+      transition: all 0.5s ease-in-out; }
 
 /*# sourceMappingURL=style.css.map */
